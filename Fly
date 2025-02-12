@@ -11,3 +11,9 @@ Window:Close({
 		Window:Destroy() --Destroying Gui Function
 	end,
 })
+Window:Minimize({
+	visibility = true, --if false, close button will disappear
+	OpenButton = true, -- Visible = false etc, open button.
+	Callback = function()
+	end,
+})
