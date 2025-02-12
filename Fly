@@ -17,3 +17,5 @@ Window:Minimize({
 	Callback = function()
 	end,
 })
+local tab1 = Window:Tab("Tab") 
+-- Window:Tab("Tab","Tab Title")
