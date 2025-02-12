@@ -19,3 +19,10 @@ Window:Minimize({
 })
 local tab1 = Window:Tab("Tab") 
 -- Window:Tab("Tab","Tab Title")
+local button = newsec:Button("New Button","Example Description",function()
+script -- ex: loadstring(game:HttpGet("..."))()
+end)
+--newsec:Button("New Button",function() end)
+-- if you create multi tab
+local tab2 = W...
+-- you need change tab1 => tab2
