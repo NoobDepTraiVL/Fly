@@ -1,2 +1,7 @@
 _Hawk = "ohhahtuhthttouttpwuttuaunbotwo"
 local Hawk = loadstring(game:HttpGet("https://raw.githubusercontent.com/TheHanki/HawkHUB/main/LibSources/HawkLib.lua", true))()
+local Window = Hawk:Window({
+	ScriptName = "Hawk HUB",
+	DestroyIfExists = true, --if false, gui wont disappear
+	Theme = "Dark" --Themes: Pink, White, Dark
+})
