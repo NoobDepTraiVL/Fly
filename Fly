@@ -153,7 +153,6 @@ plr.CharacterAdded:Connect(function(char)
 	char:WaitForChild("Humanoid").Died:Connect(disableFlight)
 end)
 
--- Slider logic
 local sliding = false
 SliderButton.InputBegan:Connect(function(input)
 	if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
