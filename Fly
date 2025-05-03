@@ -41,7 +41,7 @@ Minimize.TextColor3 = Color3.fromRGB(255, 255, 255)
 Minimize.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
 Minimize.BorderSizePixel = 0
 
-local closeBtn = Instance.new("TextButton")
+local closeBtn = Instance.new("TextButton", Frame)
 closeBtn.Size = UDim2.new(0, 20, 0, 20)
 closeBtn.Position = UDim2.new(1, -22, 0, 2)
 closeBtn.Text = "x"
