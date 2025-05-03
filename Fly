@@ -25,7 +25,7 @@ Title.Name = "Title"
 Title.Size = UDim2.new(1, 0, 0, 24)
 Title.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 Title.BorderSizePixel = 0
-Title.Text = "Fly Command"
+Title.Text = "Fly Cmd"
 Title.TextColor3 = Color3.fromRGB(200, 200, 200)
 Title.Font = Enum.Font.Gotham
 Title.TextSize = 12
@@ -33,7 +33,7 @@ Instance.new("UICorner", Title).CornerRadius = UDim.new(0, 8)
 
 local Minimize = Instance.new("TextButton", Frame)
 Minimize.Size = UDim2.new(0, 20, 0, 20)
-Minimize.Position = UDim2.new(1, -22, 0, 2)
+Minimize.Position = UDim2.new(1, -50, 0, 2)
 Minimize.Text = "-"
 Minimize.TextSize = 14
 Minimize.Font = Enum.Font.GothamBold
@@ -43,14 +43,13 @@ Minimize.BorderSizePixel = 0
 
 local closeBtn = Instance.new("TextButton", Frame)
 closeBtn.Size = UDim2.new(0, 20, 0, 20)
-closeBtn.Position = UDim2.new(1, -22, 0, 2)
+closeBtn.Position = UDim2.new(1, -25, 0, 2)
 closeBtn.Text = "x"
 closeBtn.TextSize = 14
 closeBtn.Font = Enum.Font.GothamBold
 closeBtn.TextColor3 = Color3.new(255, 255, 255)
 closeBtn.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
 closeBtn.BorderSizePixel = 0
-closeBtn.Parent = ScreenGui
 
 local ToggleButton = Instance.new("TextButton", Frame)
 ToggleButton.Size = UDim2.new(0.9, 0, 0, 24)
@@ -196,7 +195,7 @@ local minimizedSize = UDim2.new(0, 160, 0, 24)
 
 Minimize.MouseButton1Click:Connect(function()
 	isMinimized = not isMinimized
-	Minimize.Text = isMinimized and "" or "-"
+	Minimize.Text = isMinimized and  "" or "-"
 	local tweenInfo = TweenInfo.new(0.25, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
 	local tween = TweenService:Create(Frame, tweenInfo, {Size = isMinimized and minimizedSize or fullSize})
 	tween:Play()
