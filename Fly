@@ -1,6 +1,6 @@
 local flySpeed = 50
 local minSpeed = 0
-local maxSpeed = 1000
+local maxSpeed = 1500
 
 local TweenService = game:GetService("TweenService")
 local ScreenGui = Instance.new("ScreenGui", game:GetService("CoreGui"))
@@ -40,6 +40,17 @@ Minimize.Font = Enum.Font.GothamBold
 Minimize.TextColor3 = Color3.fromRGB(255, 255, 255)
 Minimize.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
 Minimize.BorderSizePixel = 0
+
+local closeBtn = Instance.new("TextButton")
+closeBtn.Size = UDim2.new(0, 20, 0, 20)
+closeBtn.Position = UDim2.new(1, -22, 0, 2)
+closeBtn.Text = "x"
+closeBtn.TextSize = 14
+closeBtn.Font = Enum.Font.GothamBold
+closeBtn.TextColor3 = Color3.new(255, 255, 255)
+closeBtn.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+closeBtn.BorderSizePixel = 0
+closeBtn.Parent = ScreenGui
 
 local ToggleButton = Instance.new("TextButton", Frame)
 ToggleButton.Size = UDim2.new(0.9, 0, 0, 24)
@@ -191,4 +202,11 @@ Minimize.MouseButton1Click:Connect(function()
 	tween:Play()
 	ToggleButton.Visible = not isMinimized
 	SpeedSlider.Visible = not isMinimized
+end)
+
+closeBtn.MouseButton1Click:Connect(function()
+	local parentGui = closeBtn:FindFirstAncestorWhichIsA("ScreenGui")
+	if parentGui then
+		parentGui:Destroy()
+	end
 end)
