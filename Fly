@@ -1,3 +1,7 @@
+local existing = game:GetService("CoreGui"):FindFirstChild("FlyControlGui")
+if existing then
+	existing:Destroy()
+end
 local flySpeed = 50
 local minSpeed = 0
 local maxSpeed = 1500
